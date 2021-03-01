@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="14.0" prefHeight="553.0" prefWidth="749.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="sectiuneStudenti" text="studenti">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="butonIncarcareStudenti" layoutX="544.0" layoutY="33.0" mnemonicParsing="false" onAction="#incarcaStudenti" prefHeight="25.0" prefWidth="191.0" text="Incarcare studenti" />
+                        <Label layoutX="21.0" layoutY="32.0" prefHeight="27.0" prefWidth="230.0" text="Datele tabelei studenti" />
+                        <TableView fx:id="tabelaStudenti" layoutX="21.0" layoutY="65.0" prefHeight="271.0" prefWidth="705.0">
+                          <columns>
+                            <TableColumn fx:id="coloanaIdStudent" prefWidth="97.0" text="idStudent" />
+                            <TableColumn fx:id="coloanaNumeStudent" prefWidth="179.0" text="Nume" />
+                              <TableColumn fx:id="coloanaPrenumeStudent" prefWidth="156.0" text="Prenume" />
+                              <TableColumn fx:id="coloanaGrupaStudent" minWidth="0.0" prefWidth="73.0" text="Grupa" />
+                              <TableColumn fx:id="coloanaSerieStudent" minWidth="1.0" prefWidth="69.0" text="Serie" />
+                              <TableColumn fx:id="coloanaAnStudent" prefWidth="50.0" text="An" />
+                              <TableColumn fx:id="coloanaSpecializareStudent" text="Specializare" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="butonAdaugareStudent" layoutX="463.0" layoutY="380.0" mnemonicParsing="false" onAction="#adaugaStudent" prefHeight="25.0" prefWidth="195.0" text="Adaugare student" />
+                        <TextField fx:id="chenarNumeStudent" layoutX="31.0" layoutY="380.0" />
+                        <TextField fx:id="chenarPrenumeStudent" layoutX="209.0" layoutY="380.0" />
+                        <Label layoutX="31.0" layoutY="363.0" text="Nume" />
+                        <Label layoutX="209.0" layoutY="363.0" text="Prenume" />
+                        <TextField fx:id="chenarGrupaStudent" layoutX="31.0" layoutY="428.0" />
+                        <TextField fx:id="chenarSerieStudent" layoutX="209.0" layoutY="428.0" />
+                        <Label layoutX="31.0" layoutY="411.0" text="Grupa" />
+                        <Label layoutX="209.0" layoutY="411.0" text="Serie" />
+                        <TextField fx:id="chenarAnStudent" layoutX="31.0" layoutY="481.0" />
+                        <TextField fx:id="chenarSpecializareStudent" layoutX="209.0" layoutY="481.0" />
+                        <Label layoutX="31.0" layoutY="464.0" text="An" />
+                        <Label layoutX="209.0" layoutY="464.0" text="Specializare" />
+                        <Button fx:id="butonStergereStudent" layoutX="357.0" layoutY="33.0" mnemonicParsing="false" onAction="#stergeStudent" prefHeight="25.0" prefWidth="164.0" text="Stergere student " />
+                        <Button fx:id="butonActualizareStudent" layoutX="462.0" layoutY="481.0" mnemonicParsing="false" onAction="#actualizeazaStudent" prefHeight="25.0" prefWidth="195.0" text="Actualizare student" />
+                        <Button fx:id="butonIncarcareActualizareStudent" layoutX="464.0" layoutY="428.0" mnemonicParsing="false" onAction="#incarcaDatePentruActualizareStudent" prefHeight="25.0" prefWidth="192.0" text="Incarcare date pentru actualizare" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="sectiuneEvaluari" text="evaluari">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="butonIncarcareEvaluari" layoutX="570.0" layoutY="31.0" mnemonicParsing="false" onAction="#incarcaEvaluari" prefHeight="25.0" prefWidth="163.0" text="Incarca Evaluari" />
+                        <Label layoutX="29.0" layoutY="30.0" prefHeight="27.0" prefWidth="152.0" text="Datele tabelei evaluari" />
+                        <TableView fx:id="tabelaEvaluari" layoutX="14.0" layoutY="88.0" prefHeight="277.0" prefWidth="695.0">
+                          <columns>
+                              <TableColumn fx:id="coloanaIdEvaluare" prefWidth="41.0" text="id" />
+                            <TableColumn fx:id="coloanaNumeEvaluare" prefWidth="133.0" text="Nume" />
+                            <TableColumn fx:id="coloanaPrenumeEvaluare" prefWidth="135.0" text="Prenume" />
+                              <TableColumn fx:id="coloanaPartialEvaluare" prefWidth="83.0" text="Partial" />
+                              <TableColumn fx:id="coloanaExamenEvaluare" prefWidth="71.0" text="Examen" />
+                              <TableColumn fx:id="coloanaColocviuEvaluare" prefWidth="70.0" text="Colocviu" />
+                              <TableColumn fx:id="coloanaMaterieEvaluare" prefWidth="161.0" text="Materie" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="chenarNumeEvaluare" layoutX="29.0" layoutY="400.0" prefHeight="25.0" prefWidth="140.0" />
+                        <TextField fx:id="chenarPrenumeEvaluare" layoutX="192.0" layoutY="400.0" prefHeight="25.0" prefWidth="143.0" />
+                        <TextField fx:id="chenarPartialEvaluare" layoutX="354.0" layoutY="400.0" prefHeight="25.0" prefWidth="147.0" />
+                        <TextField fx:id="chenarExamenEvaluare" layoutX="29.0" layoutY="448.0" prefHeight="25.0" prefWidth="140.0" />
+                        <TextField fx:id="chenarColocviuEvaluare" layoutX="194.0" layoutY="448.0" prefHeight="25.0" prefWidth="142.0" />
+                        <TextField fx:id="chenarMaterieEvaluare" layoutX="353.0" layoutY="448.0" />
+                        <Label layoutX="29.0" layoutY="375.0" prefHeight="24.0" prefWidth="119.0" text="Nume" />
+                        <Label layoutX="192.0" layoutY="376.0" prefHeight="23.0" prefWidth="119.0" text="Prenume" />
+                        <Label layoutX="354.0" layoutY="376.0" prefHeight="23.0" prefWidth="143.0" text="Punctaj obtinut la partial" />
+                        <Label layoutX="29.0" layoutY="426.0" prefHeight="21.0" prefWidth="149.0" text="Punctaj obtinut la examen" />
+                        <Label layoutX="195.0" layoutY="426.0" prefHeight="21.0" prefWidth="148.0" text="Punctaj obtinut la colocviu" />
+                        <Label layoutX="354.0" layoutY="426.0" prefHeight="22.0" prefWidth="124.0" text="Materie" />
+                        <Label layoutX="40.0" layoutY="476.0" prefHeight="22.0" prefWidth="457.0" text="Atentie! Numele studentului si materia trebuie sa fie existente in baza de date!" />
+                        <Button fx:id="butonAdaugareEvaluare" layoutX="529.0" layoutY="387.0" mnemonicParsing="false" onAction="#adaugaEvaluare" prefHeight="25.0" prefWidth="184.0" text="Adaugare evaluare" />
+                        <Button fx:id="butonIncarcareActualizareEvaluare" layoutX="529.0" layoutY="424.0" mnemonicParsing="false" onAction="#incarcaDatePentruActualizareEvaluare" prefHeight="25.0" prefWidth="185.0" text="Incarcare date pentru actulizare" />
+                        <Button fx:id="butonActualizareEvaluare" layoutX="528.0" layoutY="460.0" mnemonicParsing="false" onAction="#actualizeazaEvaluare" prefHeight="25.0" prefWidth="185.0" text="Actualizare evaluare" />
+                        <Button fx:id="butonStergereEvaluare" layoutX="386.0" layoutY="31.0" mnemonicParsing="false" onAction="#stergeEvaluare" prefHeight="25.0" prefWidth="154.0" text="Stergere evaluare" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="sectiuneSubiecte" text="subiecte">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="42.0" layoutY="35.0" prefHeight="25.0" prefWidth="242.0" text="Subiectele unei materii" />
+                        <Button fx:id="butonIncarcareSubiecte" layoutX="574.0" layoutY="35.0" mnemonicParsing="false" onAction="#incarcaSubiecte" prefHeight="25.0" prefWidth="134.0" text="Incarcare Subiecte" />
+                        <TableView fx:id="tabelaSubiecte" layoutX="42.0" layoutY="91.0" prefHeight="277.0" prefWidth="666.0">
+                          <columns>
+                              <TableColumn fx:id="coloanaIdMaterieSubiect" prefWidth="37.0" text="id" />
+                            <TableColumn fx:id="coloanaDenumireMaterieSubiect" prefWidth="279.0" text="Denumire Materie" />
+                            <TableColumn fx:id="coloanaPartialSubiect" minWidth="0.0" prefWidth="122.0" text="Partial" />
+                              <TableColumn fx:id="coloanaExamenSubiect" prefWidth="121.0" text="Examen" />
+                              <TableColumn fx:id="coloanaColocviuSubiect" minWidth="0.0" prefWidth="119.0" text="Colocviu" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="chenarDenumireMaterieSubiect" layoutX="42.0" layoutY="403.0" />
+                        <TextField fx:id="chenarPartialSubiect" layoutX="210.0" layoutY="403.0" />
+                        <TextField fx:id="chenarExamenSubiect" layoutX="42.0" layoutY="455.0" />
+                        <TextField fx:id="chenarColocviuSubiect" layoutX="210.0" layoutY="455.0" />
+                        <Label layoutX="42.0" layoutY="386.0" prefHeight="17.0" prefWidth="137.0" text="Denumire Materie" />
+                        <Label layoutX="210.0" layoutY="386.0" prefHeight="17.0" prefWidth="99.0" text="Partial" />
+                        <Label layoutX="42.0" layoutY="438.0" prefHeight="17.0" prefWidth="90.0" text="Examen" />
+                        <Label layoutX="212.0" layoutY="438.0" prefHeight="17.0" prefWidth="95.0" text="Colocviu" />
+                        <Button fx:id="butonAdaugareSubiect" layoutX="496.0" layoutY="391.0" mnemonicParsing="false" onAction="#adaugaSubiect" prefHeight="25.0" prefWidth="191.0" text="Adaugare Subiect" />
+                        <Label layoutX="42.0" layoutY="492.0" prefHeight="17.0" prefWidth="569.0" text="Atentie! Numele materiei trebuie sa fie existent in baza de date!  Adauga noua materie in tab-ul materii. " />
+                        <Button fx:id="butonIncarcareActualizareSubiect" layoutX="495.0" layoutY="426.0" mnemonicParsing="false" onAction="#incarcaDatePentruActualizareSubiect" prefHeight="25.0" prefWidth="192.0" text="Incarcare date pentru actualizare" />
+                        <Button fx:id="butonActualizareSubiect" layoutX="497.0" layoutY="461.0" mnemonicParsing="false" onAction="#actualizeazaSubiect" prefHeight="25.0" prefWidth="190.0" text="Actualizare subiect" />
+                        <Button fx:id="butonStergereSubiect" layoutX="414.0" layoutY="35.0" mnemonicParsing="false" onAction="#stergeSubiect" prefHeight="25.0" prefWidth="145.0" text="Stergere subiect" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="sectiuneMaterii" text="materii">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="butonIncarcareMaterii" layoutX="541.0" layoutY="27.0" mnemonicParsing="false" onAction="#incarcaMaterii" prefHeight="25.0" prefWidth="192.0" text="Incarcare materii" />
+                        <Label layoutX="14.0" layoutY="26.0" prefHeight="28.0" prefWidth="214.0" text="Datele tabelei materii" />
+                        <TableView fx:id="tabelaMaterii" layoutX="21.0" layoutY="60.0" prefHeight="302.0" prefWidth="705.0">
+                          <columns>
+                            <TableColumn fx:id="coloanaIdMaterie" prefWidth="69.0" text="idMaterie" />
+                            <TableColumn fx:id="coloanaDenumireMaterie" prefWidth="308.0" text="Denumire" />
+                              <TableColumn fx:id="coloanaProfesorMaterie" prefWidth="234.0" text="Profesor" />
+                              <TableColumn fx:id="coloanaPuncteCreditMaterie" prefWidth="93.0" text="PuncteCredit" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="chenarDenumireMaterie" layoutX="21.0" layoutY="401.0" prefHeight="25.0" prefWidth="161.0" />
+                        <TextField fx:id="chenarProfesorMaterie" layoutX="203.0" layoutY="400.0" prefHeight="25.0" prefWidth="172.0" />
+                        <TextField fx:id="chenarPuncteCreditMaterie" layoutX="398.0" layoutY="400.0" prefHeight="25.0" prefWidth="75.0" />
+                        <Button fx:id="butonAdaugareMaterie" layoutX="535.0" layoutY="400.0" mnemonicParsing="false" onAction="#adaugaMaterie" prefHeight="25.0" prefWidth="189.0" text="Adaugare materie" />
+                        <Label layoutX="21.0" layoutY="378.0" prefHeight="22.0" prefWidth="113.0" text="Denumire materie" />
+                        <Label layoutX="203.0" layoutY="378.0" prefHeight="23.0" prefWidth="121.0" text="Profesor" />
+                        <Label layoutX="398.0" layoutY="378.0" prefHeight="23.0" prefWidth="113.0" text="Puncte credit" />
+                        <Button fx:id="butonIncarcareActualizareMaterie" layoutX="535.0" layoutY="439.0" mnemonicParsing="false" onAction="#incarcaDatePentruActualizareMaterie" prefHeight="25.0" prefWidth="190.0" text="Incarcare date pentru actualizare" />
+                        <Button fx:id="butonActualizareMaterie" layoutX="535.0" layoutY="476.0" mnemonicParsing="false" onAction="#actualizeazaMaterie" prefHeight="25.0" prefWidth="190.0" text="Actualizare materie" />
+                        <Button fx:id="butonStergereMaterie" layoutX="372.0" layoutY="27.0" mnemonicParsing="false" onAction="#stergeMaterie" prefHeight="25.0" prefWidth="144.0" text="Stergere materie" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
